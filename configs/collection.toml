@@ -1,0 +1,19 @@
+log_dir = "/var/log/uche-data-sync"
+log_level = "debug"
+
+[mqtt]
+server = "tcp://emqtt.tescar.cn:1883"
+client_id = "cheliankeji_test100100100100"
+username = "cheliankeji"
+password = "cheliankeji"
+topic = ["boxver", "protocol", "dbinfo", "boxstate", "gps", "event/engstate", "event/drive", "event/run", "event/traffic", "event/box", "event/tyre", "event/fuel", "event/dtc", "event/area", "statistic", "boxbody", "cardata"]
+qos = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+
+[mongo_db]
+url = "192.168.1.250:27017"
+db = "obddata"
+pool_limit = 100
+
+[worker_pool]
+work_size = 100
+pool_size = 10
